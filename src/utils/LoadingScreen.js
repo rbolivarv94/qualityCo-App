@@ -32,7 +32,7 @@ const LoadingScreen = ({ onReady }) => {
   if (isReady) {
     return (
       <div style={styles.container}>
-        <h1>Bienvennido a QualityCo</h1>
+        <h1>Bienvenido a QualityCo</h1>
         <button style={styles.button} onClick={onReady}>
           Entrar
         </button>
