@@ -15,20 +15,20 @@ const ShopifyPage = () => {
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
-
   if (!isOnline) {
     return (
       <div>
-        <h1>You're offline</h1>
-        <p>Please check your internet connection to access the store.</p>
-        <button onClick={() => window.location.reload()}>Retry</button>
+        <h1>Estás sin conexión</h1>
+        <p>Por favor, verifica tu conexión a internet para acceder a la tienda.</p>
+        <button onClick={() => window.location.reload()}>Reintentar</button>
       </div>
     );
   }
   
-  // Redirect to Shopify
+  // Redirigir a Shopify
   window.location.href = 'https://directodefabrica.com';
-  return <div>Redirecting to the store...</div>;
-};
-
-export default ShopifyPage;
+  return <div>Redirigiendo a la tienda...</div>;
+  };
+  
+  export default ShopifyPage;
+  

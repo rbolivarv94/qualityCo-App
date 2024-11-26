@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import backgroundImage from '../Assets/LandingImage.jpg'
+
 
 const LoadingScreen = ({ onReady }) => {
   const [isLoading, setIsLoading] = useState(true); // Tracks loading status
@@ -20,9 +22,9 @@ const LoadingScreen = ({ onReady }) => {
   if (isLoading) {
     return (
       <div style={styles.container}>
-        <h1>Welcome to QualityCo</h1>
+        <h1>Directo de Fábrica</h1>
         <div style={styles.spinner}></div>
-        <p>Loading website data...</p>
+        <p>Cargando Datos...</p>
       </div>
     );
   }
@@ -30,9 +32,9 @@ const LoadingScreen = ({ onReady }) => {
   if (isReady) {
     return (
       <div style={styles.container}>
-        <h1>Website is Ready</h1>
+        <h1>Bienvennido a QualityCo</h1>
         <button style={styles.button} onClick={onReady}>
-          Access
+          Entrar
         </button>
       </div>
     );
@@ -48,8 +50,11 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100vh',
-    backgroundColor: '#f8f8f8',
+    backgroundImage: `url(${backgroundImage})`, // Set background image
+    backgroundSize: 'cover', // Ensure the image covers the entire container
+    backgroundPosition: 'center', // Center the image
     textAlign: 'center',
+    color: '#fff', // Adjust text color for better visibility
   },
   spinner: {
     width: '50px',
@@ -63,7 +68,7 @@ const styles = {
     marginTop: '20px',
     padding: '10px 20px',
     fontSize: '16px',
-    backgroundColor: '#000',
+    backgroundColor: '#002149',
     color: '#fff',
     border: 'none',
     borderRadius: '5px',
